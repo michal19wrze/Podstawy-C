@@ -7,12 +7,10 @@ scanf("%d",&a);
 printf("silnia:\n");
 
 int i=1;
-while(i<=a){
-  
+do{
   b*=i;
   i++;
-
-}
+}while(i<=a);
 printf("%d\n",b);
 
 
