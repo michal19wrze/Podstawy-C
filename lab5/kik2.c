@@ -12,9 +12,8 @@ printf(" [%c][%c][%c]\n",pole[0][0],pole[0][1],pole[0][2]);
 printf(" [%c][%c][%c]\n",pole[1][0],pole[1][1],pole[1][2]);
 printf(" [%c][%c][%c]\n",pole[2][0],pole[2][1],pole[2][2]);}
 
-
+//ruch komputera
 int funkcja(int a, int b, char pole[3][3]){
-//ruch pc
 a=(int)(rand() %3);
 b=(int)(rand() %3);
 if(pole[a][b] !='x' && pole[a][b] != 'o'){
@@ -40,7 +39,14 @@ scanf("%d",&i);
 scanf("%d",&j);
 i=i-1;
 j=j-1;
-pole[i][j]='x';
+if(pole[i][j]=='x' || pole[i][j]=='o'){
+  printf("Nie mozna wstawic krzyzyka w to miejsce.\n");
+  return 0;
+}
+else{
+  pole[i][j]='x';
+}
+
 int a,b;
 
 
